@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "823c15a5-f33d-427b-ab67-e6f9f0f42485",
+		"name": "MongoDB - Parcial 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48418360",
+		"_collection_link": "https://dami-zamora2024-9072438.postman.co/workspace/Daniel-Angel's-Workspace~98f8c06e-a4e5-472d-8f77-2dde556b30fc/collection/48418360-823c15a5-f33d-427b-ab67-e6f9f0f42485?action=share&source=collection_link&creator=48418360"
+	},
+	"item": [
+		{
+			"name": "Get leagues",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Age Of Empires\",\n    \"platform\": \"PC\",\n    \"price\": 15,\n    \"stock\": 100,\n    \"img\": \"https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2019%2F08%2F19%2Fheader_image%2F163326851566244790.jpg?auth=4590a7b05c560f7cd787ff019086f8e44a87d1228e1d7eb769c413b695658108&width=480&height=250&smart=true\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/leagues",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"leagues"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get league by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/league/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"league",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "690767f7bf7e727f003292a6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post league",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Premier League33\",\n    \"sport\": \"Football\",\n    \"country\": \"England\",\n    \"participantNumber\": 20\n}   "
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/league",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"league"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update league",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Liga Argentina\",\n    \"sport\": \"Football\",\n    \"country\": \"Argentina\",\n    \"participantNumber\": 40\n}   "
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/league/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"league",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "69076aad8dea2737145603cd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post league",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/league/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"league",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "690767f4bf7e727f003292a4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
