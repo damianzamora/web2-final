@@ -7,7 +7,7 @@ async function getLeagues(req, res){
         const leagues = await League.find()
         res.status(200).send({
             ok:true,
-            message: "Ligas obtenidas correctamente",
+            message: showMessage(leagues),
             leagues
         })
 
@@ -116,6 +116,16 @@ async function updateLeague(req, res){
     } catch (error) {
         res.status(500).send("Error al actualizar liga")
         console.log(error)
+    }
+}
+
+function showMessage(leagues) {
+    if (!leagues || leagues.length === 0) {
+        return "No hay ligas para mostrar";
+    } else if (leagues.length === 1) {
+        return "Se ha encontrado 1 liga";
+    } else {
+        return "Lista de ligas recuperada con éxito";
     }
 }
 
