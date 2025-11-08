@@ -7,15 +7,15 @@ const leagueController = require('../controllers/league.controller')
 router.get("/leagues", leagueController.getLeagues)
 
 //Get league by ID
-router.get("/league/:id", leagueController.getLeagueById)
+router.get("/leagues/:id", leagueController.getLeagueById)
 
 //POST league
-router.post("/league", leagueController.createLeague)
+router.post("/leagues", leagueController.createLeague)
 
 //DELETE league
-router.delete("/league/:id", leagueController.deleteLeague)
+router.delete("/leagues/:id", leagueController.deleteLeague)
 
 //UPDATE league
-router.put("/league/:id", leagueController.updateLeague)
+router.put("/leagues/:id", leagueController.updateLeague)
 
 module.exports = router;
