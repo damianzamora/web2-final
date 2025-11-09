@@ -4,6 +4,7 @@ const router = express.Router();
 const leagueController = require('../controllers/league.controller')
 
 const auth = require('../middlewares/auth')
+const isAdmin = require('../middlewares/isAdmin')
 
 //GET All leagues
 router.get("/leagues", leagueController.getLeagues)
@@ -15,9 +16,9 @@ router.get("/leagues/:id", leagueController.getLeagueById)
 router.post("/leagues", leagueController.createLeague)
 
 //DELETE league
-router.delete("/leagues/:id", [auth], leagueController.deleteLeague)
+router.delete("/leagues/:id", [auth, isAdmin], leagueController.deleteLeague)
 
 //UPDATE league
-router.put("/leagues/:id",[auth], leagueController.updateLeague)
+router.put("/leagues/:id", [auth], leagueController.updateLeague)
 
 module.exports = router;
