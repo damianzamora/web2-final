@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "ded6b7e0-5738-4d82-9e84-08a5b3e71467",
+		"name": "MongoDB - Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48418360",
+		"_collection_link": "https://dami-zamora2024-9072438.postman.co/workspace/Daniel-Angel's-Workspace~98f8c06e-a4e5-472d-8f77-2dde556b30fc/collection/48418360-ded6b7e0-5738-4d82-9e84-08a5b3e71467?action=share&source=collection_link&creator=48418360"
+	},
+	"item": [
+		{
+			"name": "league",
+			"item": [
+				{
+					"name": "Get leagues",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Age Of Empires\",\n    \"platform\": \"PC\",\n    \"price\": 15,\n    \"stock\": 100,\n    \"img\": \"https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2019%2F08%2F19%2Fheader_image%2F163326851566244790.jpg?auth=4590a7b05c560f7cd787ff019086f8e44a87d1228e1d7eb769c413b695658108&width=480&height=250&smart=true\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/leagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get league by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/leagues/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"leagues",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690f9cf556b19daa5bfceee6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post league",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Premier League33\",\n    \"sport\": \"Football\",\n    \"country\": \"England\",\n    \"participantNumber\": 20\n}   "
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/leagues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"leagues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update league",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY5MGY4NGVlMTQyOTE5ZTg5N2EyODhiNSIsImZ1bGxuYW1lIjoiRGFtaWFuIFBhYmxvIFphbW9yYSIsImVtYWlsIjoiZGFtaS56YW1vcmFAZ21haWwuY29tIiwiYm9ybkRhdGUiOiIxOTg4LTEyLTA0VDAwOjAwOjAwLjAwMFoiLCJsb2NhdGlvbiI6IkJ1ZW5vcyBBaXJlcyIsInJvbGUiOiJBRE1JTl9ST0xFIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIiwidXBkYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIn0sImlhdCI6MTc2MjYzMDM5NSwiZXhwIjoxNzYyNjMwOTk1fQ.vYNTap1ZAMfe-E8TWi5FNfUL8SOX4-CTl2qX2e_h-I8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Liga Argentina\",\n    \"sport\": \"Football\",\n    \"country\": \"Argentina\",\n    \"participantNumber\": 40\n}   "
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/leagues/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"leagues",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690bf65fc0ff0f96c7be643f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post league",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY5MGY4NGVlMTQyOTE5ZTg5N2EyODhiNSIsImZ1bGxuYW1lIjoiRGFtaWFuIFBhYmxvIFphbW9yYSIsImVtYWlsIjoiZGFtaS56YW1vcmFAZ21haWwuY29tIiwiYm9ybkRhdGUiOiIxOTg4LTEyLTA0VDAwOjAwOjAwLjAwMFoiLCJsb2NhdGlvbiI6IkJ1ZW5vcyBBaXJlcyIsInJvbGUiOiJBRE1JTl9ST0xFIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIiwidXBkYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIn0sImlhdCI6MTc2MjYzMDM5NSwiZXhwIjoxNzYyNjMwOTk1fQ.vYNTap1ZAMfe-E8TWi5FNfUL8SOX4-CTl2qX2e_h-I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/leagues/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"leagues",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690bf65fc0ff0f96c7be643f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Age Of Empires\",\n    \"platform\": \"PC\",\n    \"price\": 15,\n    \"stock\": 100,\n    \"img\": \"https://img.asmedia.epimg.net/resizer/v2/https%3A%2F%2Fstatic.prisa.com%2Fgamepedia%2Fimagenes%2F2019%2F08%2F19%2Fheader_image%2F163326851566244790.jpg?auth=4590a7b05c560f7cd787ff019086f8e44a87d1228e1d7eb769c413b695658108&width=480&height=250&smart=true\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690767f7bf7e727f003292a6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Damian Pablo Zamora\",\n    \"email\": \"dami.zamora@gmail.com\",\n    \"password\": \"pass345\",\n    \"bornDate\": \"1988-12-04\",\n    \"location\": \"Buenos Aires\",\n    \"role\": \"ADMIN_ROLE\"\n}   "
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY5MGY4NGVlMTQyOTE5ZTg5N2EyODhiNSIsImZ1bGxuYW1lIjoiRGFtaWFuIFBhYmxvIFphbW9yYSIsImVtYWlsIjoiZGFtaS56YW1vcmFAZ21haWwuY29tIiwiYm9ybkRhdGUiOiIxOTg4LTEyLTA0VDAwOjAwOjAwLjAwMFoiLCJsb2NhdGlvbiI6IkJ1ZW5vcyBBaXJlcyIsInJvbGUiOiJBRE1JTl9ST0xFIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIiwidXBkYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIn0sImlhdCI6MTc2MjYzMDM5NSwiZXhwIjoxNzYyNjMwOTk1fQ.vYNTap1ZAMfe-E8TWi5FNfUL8SOX4-CTl2qX2e_h-I8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullname\": \"Damian Pablo Zamora\",\n    \"email\": \"dami.zamora@gmail.com\",\n    \"password\": \"pass345\",\n    \"bornDate\": \"1988-12-04\",\n    \"location\": \"CABA\",\n    \"role\": \"ADMIN_ROLE\"\n}   "
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690f84ee142919e897a288b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY5MGY4NGVlMTQyOTE5ZTg5N2EyODhiNSIsImZ1bGxuYW1lIjoiRGFtaWFuIFBhYmxvIFphbW9yYSIsImVtYWlsIjoiZGFtaS56YW1vcmFAZ21haWwuY29tIiwiYm9ybkRhdGUiOiIxOTg4LTEyLTA0VDAwOjAwOjAwLjAwMFoiLCJsb2NhdGlvbiI6IkJ1ZW5vcyBBaXJlcyIsInJvbGUiOiJBRE1JTl9ST0xFIiwiY3JlYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIiwidXBkYXRlZEF0IjoiMjAyNS0xMS0wOFQxNzo1OToxMC45MjRaIn0sImlhdCI6MTc2MjYzMDM5NSwiZXhwIjoxNzYyNjMwOTk1fQ.vYNTap1ZAMfe-E8TWi5FNfUL8SOX4-CTl2qX2e_h-I8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "690f84ee142919e897a288b5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"dami.zamora@gmail.com\",\n    \"password\": \"pass345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

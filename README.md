@@ -1,6 +1,10 @@
 🏆 League API – CRUD con Node.js, Express y MongoDB
 
-Este proyecto implementa una API RESTful para gestionar ligas deportivas, permitiendo crear, leer, actualizar y eliminar registros desde una base de datos MongoDB.
+Proyecto que implementa una API RESTful para gestionar ligas deportivas, permitiendo crear, leer, actualizar y eliminar registros desde una base de datos MongoDB.
+
+Se le agrega la feature para manejar CRUD de usuarios, permitiendo definir distintos roles (admin o client), el cual permitirá tener distintos tipos de accesos a los métodos.
+
+Para que esto ocurra se agrega dos middleware, uno para autenticar los usuarios mediante un token y otro para verificar que el usuario sea de tipo ADMIN cuando se necesite.
 
 ⚙️ Tecnologías utilizadas
 
@@ -43,7 +47,6 @@ Método	Endpoint	Descripción
 }
 
 
-
 🧠 Controladores
 
 Los controladores implementan la lógica principal del CRUD:
@@ -64,11 +67,29 @@ Actualiza una liga existente. Si el ID no existe, devuelve un error 404.
 🔹 deleteLeague
 Elimina una liga según su ID. Si no se encuentra, devuelve un error 404.
 
-🧪 Uso del sistema
 
-Se debe correr el comando 'node index.js' el cual levantará el programa en el puerto 3000.
-Una vez levantado se puede correr las colecciones de postman que estan incluidas en el archivo
-'postman_collection.json'
+🧪 Instalación, configuración y uso de sistema.
+
+a) git clone https://github.com/damianzamora/web2-tp2.git
+
+b) Crear archivo .env en la ruta principal con las siguientes variables y valores.
+
+SERVER_PORT = 3000
+
+MONGO_URL = Se envía URL via mail
+
+SECRET = Alf@b3t@!$
+
+c) Instalar dependencias
+
+npm install ( crea package.json y package-lock.json)
+
+npm install bcrypt dotenv express jsonwebtoken mongoose
+
+d) Abrir terminal y ejecutar node index.js, esto levantará el sistema en puerto 3000.
+
+e) Ejecutar colecciones de postman ubicadas en 'postman_collection.json' , en postman se puede importar.
+
 
 
 
